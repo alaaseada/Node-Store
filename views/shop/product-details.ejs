@@ -1,0 +1,19 @@
+<%- include('../includes/head.ejs') %>
+</head>
+<body>
+<%- include('../includes/nav.ejs') %>
+<main>
+ <% if (product) {%>
+  <div class="col-2">
+   <div class="image-container">
+    <img src="<%= product.imageUrl %>"/>
+   </div>
+   <div class="product-details">
+    <p class="title"><%= product.title %></p>
+    <p class="price"><span>Price: </span>$<%= product.price %></p>
+    <p class="description"><%= product.description %></p>
+   </div>
+   <%}%>
+  </div>
+</main>
+<%- include('../includes/closing.ejs') %>
